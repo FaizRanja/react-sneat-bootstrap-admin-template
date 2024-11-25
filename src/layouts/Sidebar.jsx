@@ -50,7 +50,7 @@ const MenuItem = (item) => {
                 aria-label={`Navigate to ${item.text} ${!item.available ? 'Pro' : ''}`}
                 to={item.link}
                 className={`menu-link ${item.submenu ? 'menu-toggle' : ''}`}
-                target={item.link.includes('http') ? '_blank' : undefined}
+           
             >
                 <i className={`menu-icon tf-icons ${item.icon}`}></i>
                 <div>{item.text}</div> {item.available === false && (

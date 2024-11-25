@@ -40,69 +40,43 @@
                         "link": "/layout/blank"
                     }
                 ]
-            },
+            }
+          
+        ]
+    },
+
+    {
+        "header": "Api Key",
+        "items": [
+
             {
-                "text": "Front Pages",
-                "icon": "bx bx-store",
-                "available": false,
+                "text": "Key",
+                "icon": "bx bx-dock-top",
+                "available": true,
                 "link": "",
                 "submenu": [
                     {
-                        "text": "Landing",
+                        "text": "Your Key",
                         "available": true,
-                        "link": "https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/landing-page.html"
+                        "link": "/account/Key"
                     },
                     {
-                        "text": "Pricing",
+                        "text": "Get Script",
                         "available": true,
-                        "link": "https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/pricing-page.html"
-                    },
-                    {
-                        "text": "Payment",
-                        "available": true,
-                        "link": "https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/payment-page.html"
-                    },
-                    {
-                        "text": "Checkout",
-                        "available": true,
-                        "link": "https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/checkput-page.html"
-                    },
-                    {
-                        "text": "Help Center",
-                        "available": true,
-                        "link": "https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/help-center-landing.html"
+                        "link": "/account/script"
                     }
                 ]
             }
+            
+          
         ]
     },
+
+
     {
         "header": "APPS & PAGES",
         "items": [
-            {
-                "text": "Email",
-                "icon": "bx bx-envelope",
-                "available": false,
-                "link": "https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/vertical-menu-template/app-email.html"
-            },
-            {
-                "text": "Chat",
-                "icon": "bx bx-chat",
-                "available": false,
-                "link": "https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/vertical-menu-template/app-chat.html"
-            },
-            {
-                "text": "Calendar",
-                "icon": "bx bx-calendar",
-                "available": false,
-                "link": "https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/vertical-menu-template/app-calendar.html"
-            },
-            {
-                "text": "Kanban",
-                "icon": "bx bx-grid",
-                "available": false,
-                "link": "https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/vertical-menu-template/app-kanban.html"
-            },
+
             {
                 "text": "Account Setting",
                 "icon": "bx bx-dock-top",
@@ -335,24 +309,14 @@
                     }
                 ]
             },
-            {
-                "text": "Validation",
-                "icon": "bx bx-list-check",
-                "available": false,
-                "link": "https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/vertical-menu-template/form-validation.html"
-            },
+            
             {
                 "text": "Tables",
                 "icon": "bx bx-table",
                 "available": true,
                 "link": "/tables"
-            },
-            {
-                "text": "Datatablse",
-                "icon": "bx bx-grid",
-                "available": false,
-                "link": "https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/vertical-menu-template/tables-datatables-basic.html"
             }
+         
         ]
     },
     {

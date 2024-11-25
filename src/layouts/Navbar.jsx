@@ -1,5 +1,34 @@
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import getGreetingMessage from '../utils/greetingHandler';
+
+import Cookies from 'js-cookie'; // Import js-cookie
+
 const Navbar = () => {
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+  const navigate = useNavigate();
+
+  const handleLogout = async (e) => {
+    e.preventDefault();
+
+    try {
+      await axios.post("http://localhost:4000/api/v1/user/logout", {}, {
+        withCredentials: true // Ensure cookies are sent with the request
+      });
+
+      Cookies.remove('token'); // Remove token from cookies
+      setSuccess("User logout successful!");
+      setError(null);
+      navigate("/auth/login");
+    } catch (err) {
+      console.error(err);
+      setError("Logout failed. Please try again.");
+      setSuccess(null);
+    }
+  };
+
   return (
     <nav
       className="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
@@ -63,7 +92,7 @@ const Navbar = () => {
                 <div className="dropdown-divider"></div>
               </li>
               <li>
-                <a aria-label='click to log out' className="dropdown-item" href="#">
+                <a aria-label='click to log out' className="dropdown-item" href="#" onClick={handleLogout}>
                   <i className="bx bx-power-off me-2"></i>
                   <span className="align-middle">Log Out</span>
                 </a>
@@ -72,7 +101,20 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
+
+      {/* Display success or error messages */}
+      {success && (
+        <div className="alert alert-success" role="alert">
+          {success}
+        </div>
+      )}
+      {error && (
+        <div className="alert alert-danger" role="alert">
+          {error}
+        </div>
+      )}
     </nav>
   );
-}
+};
+
 export default Navbar;
