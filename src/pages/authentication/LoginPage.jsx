@@ -88,7 +88,7 @@ export const LoginPage = () => {
           </div>
         </div>
         <div className="mb-3">
-          <button aria-label="Click me" className="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+          <button aria-label="Click me" className="btn btn-primary d-grid w-100" type="submit" onClick={handleLogin} >Sign in</button>
         </div>
       </form>
 
