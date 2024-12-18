@@ -27,7 +27,6 @@ export const RegisterPage = () => {
       setError("You must accept the terms and conditions.");
       return;
     }
-
     try {
       const userData = { name, email, password }; // Make sure it's an object
       const response = await dispatch(registerUser(userData)); // Assuming registerUser is a thunk
